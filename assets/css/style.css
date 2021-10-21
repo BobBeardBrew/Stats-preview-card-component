@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+/*=============== GOOGLE FONTS ===============*/
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white: hsl(0, 0%, 100%);
+  /*=======> 0.75 main paragraph, 0.6 stat headgings===*/
+  --darkblue: hsl(233, 47%, 7%);
+  --darkblue-desaturated: hsl(244, 38%, 16%);
+  --violet-soft: hsl(277, 64%, 61%);
+  /*========== Font and typography ==========*/
+  --value-font: "Lexend Deca";
+  --body-font: "Inter";
+  --body-font-size: 0.9375rem;
+  --bigger-font-size: 3rem;
+  --big-font-size: 2rem;
+  --medium-font-size: 1.2rem;
+  /*========== Font weight ==========*/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  /*========== Margenes Bottom ==========*/
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --mb-3-5: 3.5rem;
+  /*========== z index ==========*/
+  --z-fixed: 100;
+  /*========== HOVER OVERLAY ==========*/
+}
+
+/*=============== RESPONSIVE TYPOGRAPHY ===============*/
+/*
+@media screen and (max-width: 968px) {
+	:root {
+		--biggest-font-size: ;
+		--bigger-font-size: ;
+		--big-font-size: ;
+		--h2-font-size: ;
+		--h3-font-size: ;
+		--normal-font-size: ;
+		--small-font-size: ;
+		--smaller-font-size: ;
+	}
+}
+*/
+/*=============== BASE ===============*/
+body {
+  color: var(--white);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-normal);
+  background-color: var(--darkblue);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  max-width: 1110px;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  background-color: var(--darkblue-desaturated);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/*=============== Card ===============*/
+.data {
+  padding: 0 45px 0 60px;
+}
+
+.data h2 {
+  font-size: var(--bigger-font-size);
+  font-weight: var(--font-bold);
+  line-height: 1.15;
+  margin: 0 0 2.5rem 0;
+  word-spacing: 2px;
+}
+
+.data .violet {
+  color: var(--violet-soft);
+}
+
+.data__text {
+  font-size: var(--medium-font-size);
+  line-height: 1.5;
+  word-spacing: 1px;
+  font-weight: var(--font-normal);
+  opacity: 0.7;
+  margin-bottom: var(--mb-3-5);
+}
+
+.value {
+  display: flex;
+}
+
+.value__info {
+  flex: 1 1 33.333%;
+}
+
+.value h3 {
+  font-size: var(--big-font-size);
+  font-weight: var(--font-bold);
+  line-height: 1.5;
+}
+
+.value p {
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-family: var(--value-font);
+  letter-spacing: 2px;
+}
+
+.card__body-image {
+  background-color: var(--violet-soft);
+}
+
+.card__body-image img {
+  width: 100%;
+  max-height: 100%;
+  filter: brightness(0.8);
+  opacity: 0.6;
+}
