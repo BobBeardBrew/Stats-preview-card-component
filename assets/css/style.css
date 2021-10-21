@@ -121,20 +121,15 @@ h6 {
 }
 
 /*=============== RESPONSIVE TYPOGRAPHY ===============*/
-/*
 @media screen and (max-width: 968px) {
-	:root {
-		--biggest-font-size: ;
-		--bigger-font-size: ;
-		--big-font-size: ;
-		--h2-font-size: ;
-		--h3-font-size: ;
-		--normal-font-size: ;
-		--small-font-size: ;
-		--smaller-font-size: ;
-	}
+  :root {
+    --body-font-size: 0.8rem;
+    --bigger-font-size: 2rem;
+    --big-font-size: 1.5rem;
+    --medium-font-size: 1rem;
+  }
 }
-*/
+
 /*=============== BASE ===============*/
 body {
   color: var(--white);
@@ -152,9 +147,10 @@ main {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1440px;
+  max-width: 1480px;
   margin: 0 auto;
   min-height: 100vh;
+  padding: 0 20px;
 }
 
 .grid {
@@ -169,7 +165,7 @@ main {
 
 /*=============== Card ===============*/
 .data {
-  padding: 0 45px 0 60px;
+  padding: 20px 45px 20px 60px;
 }
 
 .data h2 {
@@ -223,4 +219,39 @@ main {
   max-height: 100%;
   filter: brightness(0.8);
   opacity: 0.6;
+}
+
+/*======== MEDIA ========*/
+@media screen and (max-width: 968px) {
+  .container {
+    max-width: 967px;
+    padding: 30px 30px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+  }
+  .card__body-data {
+    padding: 40px 20px;
+    order: 2;
+  }
+  .data__text {
+    margin-bottom: var(--mb-2);
+  }
+  .value {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .card__body-image {
+    order: 1;
+  }
+  .card__body-image img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: brightness(0.8);
+    opacity: 0.6;
+  }
 }
